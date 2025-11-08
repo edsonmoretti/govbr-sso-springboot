@@ -8,9 +8,9 @@ server.address=127.0.0.1
 # SSL configuration
 server.ssl.enabled=true
 server.ssl.key-store-type=PKCS12
-server.ssl.key-store=classpath:keystore/edson.p12
+server.ssl.key-store=classpath:keystore/local-certificate.p12
 server.ssl.key-store-password=123456
-server.ssl.key-alias=edson
+server.ssl.key-alias=cert
 
 govbr.url-provider=${GOVBR_URL_PROVIDER:https://sso.staging.acesso.gov.br}
 govbr.url-service=${GOVBR_URL_SERVICE:https://api.staging.acesso.gov.br}
