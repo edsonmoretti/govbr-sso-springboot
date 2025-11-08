@@ -1,0 +1,22 @@
+spring.application.name=sso
+
+# HTTPS configuration for local dev at https://cadimpacto.localhost
+# Server will run on port 8443 and use the PKCS12 keystore placed in classpath
+server.port=443
+server.address=127.0.0.1
+
+# SSL configuration
+server.ssl.enabled=true
+server.ssl.key-store-type=PKCS12
+server.ssl.key-store=classpath:keystore/edson.p12
+server.ssl.key-store-password=123456
+server.ssl.key-alias=edson
+
+govbr.url-provider=${GOVBR_URL_PROVIDER:https://sso.staging.acesso.gov.br}
+govbr.url-service=${GOVBR_URL_SERVICE:https://api.staging.acesso.gov.br}
+govbr.redirect-uri=${GOVBR_REDIRECT_URI:https://sua-url.localhost/openid}
+govbr.scopes=${GOVBR_SCOPES:openid+email+phone+profile}
+govbr.client-id=${GOVBR_CLIENT_ID:client_id}
+govbr.client-secret=${GOVBR_CLIENT_SECRET}
+govbr.logout-uri=${GOVBR_LOGOUT_URI:https://sua-url.localhost/logout/govbr}
+govbr.auth.type=pure
